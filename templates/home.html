@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fire Weather Prediction</title>
+</head>
+<body>
+    <h2>Enter Weather & FWI Details</h2>
+    <form action="{{url_for('predictDatapoint')}}" method="POST">
+        <label>Temperature (°C):</label><br>
+        <input type="text" name="Tempreature" required><br><br>
+
+        <label>Relative Humidity (%):</label><br>
+        <input type="text" name="RH" required><br><br>
+
+        <label>Wind Speed (km/h):</label><br>
+        <input type="text" name="Ws" required><br><br>
+
+        <label>Rain (mm):</label><br>
+        <input type="text" name="Rain" required><br><br>
+
+        <label>Fine Fuel Moisture Code (FFMC):</label><br>
+        <input type="text" name="FFMC" required><br><br>
+
+        <label>Duff Moisture Code (DMC):</label><br>
+        <input type="text" name="DMC" required><br><br>
+
+
+        <label>Initial Spread Index (ISI):</label><br>
+        <input type="text" name="ISI" required><br><br>
+
+        <label>Classes:</label><br>
+        <input type="text" name="Classes" required><br><br>
+
+        <label>Region:</label><br>
+        <input type="text" name="Region" required><br><br>
+
+       <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <h2>
+        The FWI prediction is {{results}}
+    </h2>
+</body>
+</html>
